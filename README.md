@@ -9,7 +9,7 @@
 
 ## Comments
 * To change the port `3220` to any other port number change it in `docker-compose.yml`
-* If no .rdb file is present, redis will only run in memory.
+* If no .rdb file is present, redis will only run in memory
 * To create a backup file
- * grant `a+w` permissions to the redis folder
- * type `save` in redis-cli, just make sure that
+ * grant permissions to the redis folder `chmod -R a+w redis/`
+ * type `save` in redis-cli
