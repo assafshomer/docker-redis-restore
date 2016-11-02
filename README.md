@@ -3,4 +3,13 @@
 * Copy the rdb file into the redis directory
 * Rename it to be `dump.rdb`
 * `docker-compose up`
-* `redis-cli -h 192.168.99.100 -p 3220`
+* to connect with redis-cli
+  * on Mac: `redis-cli -h $(docker-machine ip) -p 3220`
+  * on Linux: `redis-cli -h 127.0.0.1 -p 3220`
+
+## Comments
+* To change the port `3220` to any other port number change it in `docker-compose.yml`
+* If no .rdb file is present, redis will only run in memory.
+* To create a backup file
+ * grant `a+w` permissions to the redis folder
+ * type `save` in redis-cli, just make sure that
